@@ -15,7 +15,7 @@ It works great for new items. But I started thinking about all the old pictures/
 
 So, I spent an evening digging through the app and figuring out how the Tadpoles API works. The result is this repo. It's just one script that focuses on backing up all of your kids' photos and videos no matter how long ago they were taken. If you need to do something beyond that, there are hooks in place to let you extend the script to make whichever additional API calls you need to do what you want.
 
-Also, if you have the appropriate tools installed on your system, the script will set the photo/video's EXIF creation date and filesystem modification date. This makes your items play nicely and sort properly if you archive then into Google Photos or iCloud.
+Also, if you have the appropriate tools installed on your system, the script will set the photo/video's EXIF creation date and filesystem modification date. This makes your items play nicely and sort properly if you archive them into Google Photos or iCloud.
 
 ## Installation
 
