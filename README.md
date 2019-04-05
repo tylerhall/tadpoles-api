@@ -1,5 +1,5 @@
 # tadpoles-api
-A PHP script which pretends to be the Tadpoles.com iPhone app and downloads/backs-up all of your kids' photos and videos from daycare.
+A PHP script which pretends to be the Tadpoles.com iPhone app and downloads/backs-up all of your kids' photos and videos from daycare. Metadata is carefully perserved so items can be searched within Apple Photos and Google Photos.
 
 ## Motivation
 
@@ -45,7 +45,7 @@ Note: the script only handles JPGs (and PNGs pretending to be JPGs) and MP4s. Th
 
 **Optional Setup**
 
-The script can optionally set the EXIF date of your items and also convert PNG files returned by Tadpoles into JPGs so the date can be set on them, too. (Occasionally, the Tadpoles API will return a JPG file which is actually a PNG. It's dumb. But the script will handle that case and convert the file for you.)
+The script can optionally set the EXIF date, latitude/longitude, and description of your items (so they can be searched in Apple Photos and Google Photos) and also convert PNG files returned by Tadpoles into JPGs so the date can be set on them, too. (Occasionally, the Tadpoles API will return a JPG file which is actually a PNG. It's dumb. But the script will handle that case and convert the file for you.)
 
 To use these optional features, you need to have [ExifTool](https://sno.phy.queensu.ca/~phil/exiftool/) and [ImageMagick](https://www.imagemagick.org/) installed on your system and in your `$PATH`.
 
@@ -53,4 +53,4 @@ On Debian/Ubuntu systems, that's simple to do with `sudo apt-get install imagema
 
 ## Notes
 
-I have no idea what sort of infrastructure Tadpoles' API is running on - it looks to maybe be in Google's Cloud. So, play nice and don't abuse their API too heavily. That said, the official iOS app itself is _terribly noisy_ and makes way more API calls than it should be on its own, so anyone running this script is probably going to be a nicer API citizen than their own app.
+I have no idea what sort of infrastructure Tadpoles' API is running on - it looks to maybe be in Google's Cloud. So, play nice and don't abuse their API too heavily. That said, the official iOS app itself is _terribly noisy_ and makes way more API calls than it should be doing on its own, so anyone running this script is probably going to be a nicer API citizen than their own app.
